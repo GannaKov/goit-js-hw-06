@@ -17,9 +17,8 @@ const markup = images
   .map(
     (image) =>
       `<li class="gallery-item">
-    <img class="gallery-img" src=${image.url} alt=$"image.alt"  />
+    <img class="gallery-img" src=${image.url} alt=${image.alt} />
   </li>`
   )
   .join("");
 listEl.insertAdjacentHTML("beforeend", markup);
-//src=image.url alt=image.alt
