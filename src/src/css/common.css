@@ -25,9 +25,11 @@ button {
 /* ------ Gallery ------- */
 .gallery {
   display: flex;
-  list-style: none;
   gap: 30px;
   align-items: flex-end;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
 }
 .gallery-img {
   display: block;
