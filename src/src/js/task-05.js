@@ -14,9 +14,12 @@ function onInputChange(event) {
 // -------------- 2 Var -----------
 
 // const inputClick = refs.inputEl.addEventListener("input", (event) => {
-//
 //   refs.spanName.textContent = event.currentTarget.value;
-//   if (refs.spanName.textContent === "") {
+//   if (refs.inputEl.value === "") {
 //     refs.spanName.textContent = "Anonymous";
 //   }
 // });
+// // -----------Можно так----------------
+// if (event.currentTarget.value === "") {
+//   refs.spanName.textContent = "Anonymous";
+// }
