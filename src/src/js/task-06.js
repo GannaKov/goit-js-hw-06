@@ -3,6 +3,7 @@ const validationCondition = inputEl.getAttribute("data-length");
 inputEl.addEventListener("blur", onInputBlur);
 
 function onInputBlur(event) {
+  event.preventDefault();
   if (inputEl.value.length == validationCondition) {
     inputEl.classList.contains("invalid")
       ? inputEl.classList.replace("invalid", "valid")
