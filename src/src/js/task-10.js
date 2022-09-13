@@ -3,14 +3,15 @@ function getRandomHexColor() {
 }
 const refs = {
   buttonCreate: document.querySelector("button[data-create]"),
-  buttonDestroy: document.querySelector("button [data-destroy]"),
+  buttonDestroy: document.querySelector("button[data-destroy]"),
   divBoxesEl: document.querySelector("#boxes"),
   inputEl: document.querySelector("#controls>input"),
 };
-refs.buttonCreate.addEventListener("click", onbuttonCreateClick);
-function onbuttonCreateClick(event) {
-  let divElements = [];
+
+refs.buttonCreate.addEventListener("click", onButtonCreateClick);
+function onButtonCreateClick() {
   const divAmount = refs.inputEl.value;
+  let divElements = [];
   for (let i = 0; i < divAmount; i++) {
     // divElements.push(document.createElement("div"));
     // divElements.push();
@@ -22,4 +23,23 @@ function onbuttonCreateClick(event) {
     divElements.push(makeDiv);
   }
   refs.divBoxesEl.append(...divElements);
+}
+refs.buttonDestroy.addEventListener("click", onButtonDestroyClick);
+function onButtonDestroyClick() {
+  const divElements = refs.divBoxesEl.children;
+  for (let i = divElements.length; i >= 1; i--) {
+    refs.divBoxesEl.querySelector("#boxes>div").remove();
+    refs.inputEl.velue = "";
+
+    console.log(refs.inputEl.value);
+  }
+  // console.log(refs.divBoxesEl.children);
+  // let del = refs.divBoxesEl.children;
+  // console.log(del);
+  // refs.divBoxesEl.children.remove();
+  // del.map((item) => {
+  //   const s = refs.divBoxesEl.querySelector("item");
+  //   console.log(s);
+  //   // item.remove();
+  //   });
 }
