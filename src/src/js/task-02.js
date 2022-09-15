@@ -9,15 +9,15 @@ const ingredients = [
 const listEl = document.querySelector("#ingredients");
 const makeItemList = (arr) => {
   return arr.map((item) => {
-    const listItemsEl = document.createElement("li");
-    listItemsEl.textContent = item;
-    listItemsEl.classList.add("item");
-    return listItemsEl;
+    const listItemEl = document.createElement("li");
+    listItemEl.textContent = item;
+    listItemEl.classList.add("item");
+    return listItemEl;
   });
 };
 const elementsList = makeItemList(ingredients);
 listEl.append(...elementsList);
-console.log(listEl.children);
+
 //------------ Var2 ----------
 // const elementsList1 = ingredients.map((item) => {
 //   const listItemsEl1 = document.createElement("li");
