@@ -27,20 +27,11 @@ function onButtonCreateClick() {
 }
 refs.buttonDestroy.addEventListener("click", onButtonDestroyClick);
 function onButtonDestroyClick() {
-  const divElements = refs.divBoxesEl.children;
-  for (let i = divElements.length; i >= 1; i--) {
-    refs.divBoxesEl.querySelector("#boxes>div").remove();
-    refs.inputEl.velue = "";
-
-    console.log(refs.inputEl.value);
-  }
-  // console.log(refs.divBoxesEl.children);
-  // let del = refs.divBoxesEl.children;
-  // console.log(del);
-  // refs.divBoxesEl.children.remove();
-  // del.map((item) => {
-  //   const s = refs.divBoxesEl.querySelector("item");
-  //   console.log(s);
-  //   // item.remove();
-  //   });
+  refs.divBoxesEl.innerHTML = "";
+  refs.inputEl.value = "";
 }
+// -------- Версии ---------------------
+// const divElements = refs.divBoxesEl.children;
+// for (let i = divElements.length; i >= 1; i--) {
+//   refs.divBoxesEl.querySelector("#boxes>div").remove();
+// }
