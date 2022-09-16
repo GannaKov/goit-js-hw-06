@@ -14,9 +14,6 @@ function onButtonCreateClick() {
   const divAmount = refs.inputEl.value;
   let divElements = [];
   for (let i = 0; i < divAmount; i++) {
-    // divElements.push(document.createElement("div"));
-    // divElements.push();
-    // console.log(divElements);
     const makeDiv = document.createElement("div");
     makeDiv.style.backgroundColor = getRandomHexColor();
     makeDiv.style.width = 30 + i * 10 + "px";

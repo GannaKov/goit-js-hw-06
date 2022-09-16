@@ -4,7 +4,7 @@ inputEl.addEventListener("blur", onInputBlur);
 
 function onInputBlur(event) {
   event.preventDefault();
-  if (inputEl.value.length == validationCondition) {
+  if (inputEl.value.trim().length == validationCondition) {
     inputEl.classList.contains("invalid")
       ? inputEl.classList.replace("invalid", "valid")
       : inputEl.classList.add("valid");
