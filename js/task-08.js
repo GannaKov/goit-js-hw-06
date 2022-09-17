@@ -16,6 +16,29 @@ function onFormSubmit(event) {
     event.currentTarget.reset();
   }
 }
+// ------- for Vlad --------
+// const form = document.querySelector(".login-form");
+
+// form.addEventListener("submit", onSubmit);
+
+// function onSubmit(event) {
+//   event.preventDefault();
+//   const { email, password } = event.currentTarget.elements;
+//   const data = {
+//     email: email.value,
+//     password: password.value,
+//   };
+
+//   if (data.email == "") {
+//     alert("Поле Email не заполнено!");
+//   } else if (data.password == "") {
+//     alert("Поле Password не заполнено!");
+//   } else {
+//     console.log(data);
+//     event.currentTarget.reset();
+//   }
+// }
+
 // -------------- Var 2-------------
 // function onFormSubmit(event) {
 //   event.preventDefault();
